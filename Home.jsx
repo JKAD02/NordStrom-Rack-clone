@@ -350,7 +350,7 @@ const Home = () => {
       <div>
         <h2>SHOP YOUR WAY</h2>
       </div>
-      <div>
+      <div className="way">
         <img
           src="https://n.nordstrommedia.com/id/9af9866a-ff51-45fe-b2fe-3f5a33fc811e.jpeg?h=400&w=1608"
           alt="#"
