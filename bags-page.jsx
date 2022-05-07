@@ -1,11 +1,12 @@
 import './product-page.css';
-import {mendata} from './women_data'
+import {Bagsdata} from './women_data'
 import Product_card from './card_page'
 import React, { useState, useEffect } from 'react';
-const name=["Running & Training","Golf","Hiking & Outdoors","Athleisure","New Arrivals"]
-const type=["Activewear","Jackets","Shirts","Shorts","Socks","Sweatpants","Joggers","Shirts","Shorts","Socks","Sports","Sweatpants","Sweatshirts","Hoodies","Swim","Tanks","Activewear","Athletic Gear","Equipment","Commuter"]
-const fiter_type=["Product Type","Size","Material","Color","Brand","Occasion","Feature","Fit","Length","Price","Rise","Sleeve Length","Style"]
-export const Men_Page=()=>{
+
+const name=["Crossbodies","Tote & Shopper","Shoulder & Purses","Backpacks","Handbags Under $100"]
+const type=["AllHandbags","Backpacks","Beach&Straw Bags","BucketBags","Clutches&Pouches","CrossbodyBags","HoboBags","MiniBags","Satchels","ShoulderBags","Totes","Wallets","Weekenders&Duffles"]
+const fiter_type=["Product Type","Size","Material","Color","Brand","Occasion","Feature","Fit","Length","Price","Rise","Style"]
+export const Bags_Page=()=>{
     const [data, setData] = useState([]);
     const [sortType, setSortType] = useState('');
     useEffect(() => {
@@ -16,7 +17,7 @@ export const Men_Page=()=>{
             Newest: "id"      
           };
           const sortProperty = types[type];
-          const sorted = [...mendata].sort((a, b) => b[sortProperty] - a[sortProperty]);
+          const sorted = [...Bagsdata].sort((a, b) => b[sortProperty] - a[sortProperty]);
           setData(sorted);
         };
         sortArray(sortType);
@@ -36,8 +37,8 @@ export const Men_Page=()=>{
             </div>
             <div className='box-2'>
                 <div className='subbox-1-box-2'>
-                    <p className='workout_title'><strong>Work Out. Feel Great. Repeat.</strong></p>
-                    <img src="https://n.nordstrommedia.com/id/372ff8ff-74dd-4d85-8749-59a2694a9267.jpeg?h=417&w=1334" className='show_img'/> 
+                    <p className='workout_title'><strong>Outfits for All His Adventures</strong></p>
+                    <img src="https://n.nordstrommedia.com/id/8efa7832-548f-4206-b2d8-3f85b9414f53.jpeg?h=417&w=1334" className='show_img'/> 
                     <div className='naming_div'>
                     {name.map((e,i)=>(
                     <div className='img_name' key={i}>{e}</div>
@@ -46,7 +47,7 @@ export const Men_Page=()=>{
                 </div>  
                 </div>
                 <div className='subbox-1-box-2'>
-                  <p className='workout_title'><strong>Men's Active, Workout & Gym</strong></p> 
+                  <p className='workout_title'><strong>Kid's Apparel & Accessories</strong></p> 
                   <div className='category'>
                       <div className='category_list'>
                           {type.map((e,i)=>(
