@@ -20,23 +20,22 @@
 
 .shop {
     margin-bottom: 20px;
-    /* border: 1px solid black; */
     padding-bottom: 10px;
-    width: 90%;
+    text-align: center;
 }
 
 .sign {
     padding: 10px 30px;
     background-color: white;
+    border: 1px solid #1b8ba7;
+    cursor: pointer;
+    color: #1b8ba7;
+    transition: 0.3s;
 }
 
-button {
-    border-width: 1px;
-}
-
-button:hover {
-    background-color: rgb(184, 181, 169);
-    border-width: 0px;
+.sign:hover {
+    background-color: #1b8ba7;
+    color: white;
 }
 
 .display1 {
