@@ -8,6 +8,10 @@ import { Women_Page } from "./components/productPage/women-page";
 import { CartProvider } from "react-use-cart";
 import { Shoes_Page } from "./components/productPage/shoes-page";
 import { Cart } from "./components/cartPage/cart_page";
+import { Men_Page } from "./components/productPage/men-page";
+import { Kid_Page } from "./components/productPage/kid-page";
+import { Gift_Page } from "./components/productPage/gift-page";
+import { Clearance } from "./components/clearance/Clearance";
 
 function App() {
   return (
@@ -30,6 +34,38 @@ function App() {
           element={
             <CartProvider>
               <Shoes_Page />
+            </CartProvider>
+          }
+        />
+        <Route
+          path='/men'
+          element={
+            <CartProvider>
+              <Men_Page />
+            </CartProvider>
+          }
+        />
+        <Route
+          path='/kid'
+          element={
+            <CartProvider>
+              <Kid_Page />
+            </CartProvider>
+          }
+        />
+        <Route
+          path='/gift'
+          element={
+            <CartProvider>
+              <Gift_Page />
+            </CartProvider>
+          }
+        />
+        <Route
+          path='/clearance'
+          element={
+            <CartProvider>
+              <Clearance />
             </CartProvider>
           }
         />

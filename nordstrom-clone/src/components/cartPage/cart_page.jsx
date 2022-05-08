@@ -1,6 +1,6 @@
 import "../productPage/product-page.css";
-// import giflogo from "../images/gift.svg";
-// import freedelivery from "../images/Screenshot (1310).png";
+import giflogo from "../../images/gift.svg";
+import freedelivery from "../../images/Screenshot (1310).png";
 import { useCart } from "react-use-cart";
 
 export const Cart = () => {
@@ -26,10 +26,12 @@ export const Cart = () => {
           Items in your bag are not on hold.
         </p>
         <p className='shopping_bag_main1_sub2'>
-          {/* <img src={giflogo} /> Add a gift message when you check out. */}
+          <img src={giflogo} /> Add a gift message when you check out.
         </p>
       </div>
-      <div className='free_delivery'>{/* <img src={freedelivery} /> */}</div>
+      <div className='free_delivery'>
+        <img src={freedelivery} />
+      </div>
       <div className='horizontal_line'>
         <hr />
       </div>

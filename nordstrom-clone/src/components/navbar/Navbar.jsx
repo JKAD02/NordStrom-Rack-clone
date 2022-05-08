@@ -38,12 +38,18 @@ const Navbar = () => {
       </nav>
       <hr />
       <div className='menu_div'>
-        <span>Clearance</span>
+        <Link to={"/clearance"} style={{ textDecoration: "none" }}>
+          <span>Clearance</span>
+        </Link>
         <Link to={"/women"} style={{ textDecoration: "none" }}>
           <span>Women</span>
         </Link>
-        <span>Men</span>
-        <span>Kids</span>
+        <Link to={"/men"} style={{ textDecoration: "none" }}>
+          <span>Men</span>
+        </Link>
+        <Link to={"/kid"} style={{ textDecoration: "none" }}>
+          <span>Kids</span>
+        </Link>
         <Link to={"/shoes"} style={{ textDecoration: "none" }}>
           <span>Shoes</span>
         </Link>
@@ -51,7 +57,9 @@ const Navbar = () => {
         <span>Bags & Accessories</span>
         <span>Home</span>
         <span>Beauty</span>
-        <span>Gifts</span>
+        <Link to={"/gift"} style={{ textDecoration: "none" }}>
+          <span>Gifts</span>
+        </Link>
         <span>Flash Events</span>
       </div>
     </div>
