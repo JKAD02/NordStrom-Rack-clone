@@ -1,7 +1,11 @@
 import React from "react";
+import { useCart } from "react-use-cart";
 import "./payment.css";
 
 const Payment = () => {
+  const { items, cartTotal } = useCart();
+
+  const per = (10 / 100) * cartTotal;
   return (
     <>
       <div className='pay_page'>
@@ -23,36 +27,9 @@ const Payment = () => {
               <h3>Wed,5/11-Sat,5/14</h3>
               <h3>Free</h3>
               <div>
-                <img
-                  src={
-                    "https://n.nordstrommedia.com/id/sr3/070d30a9-f1fa-433b-a161-81da6ab5f7d0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
-                  }
-                  alt=''
-                />
-                <img
-                  src={
-                    "https://n.nordstrommedia.com/id/sr3/ab785994-2ad7-47a4-b600-230e274deac3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
-                  }
-                  alt=''
-                />
-                <img
-                  src={
-                    "https://n.nordstrommedia.com/id/sr3/372dcf56-1b70-4e50-982b-0527cdf46ffd.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
-                  }
-                  alt='logo'
-                />
-                <img
-                  src={
-                    "https://n.nordstrommedia.com/id/sr3/558b1924-4895-44c6-9fcf-5aee430d14e7.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
-                  }
-                  alt='logo'
-                />
-                <img
-                  src={
-                    "https://n.nordstrommedia.com/id/sr3/af742c16-35b9-454f-b101-f79d7e2fc71d.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
-                  }
-                  alt='logo'
-                />
+                {items.map((e) => (
+                  <img src={e.images} alt='' />
+                ))}
               </div>
             </div>
             <div className='main_sec'>
@@ -115,7 +92,7 @@ const Payment = () => {
               <h2>Review order</h2>
               <div>
                 <span>Your items</span>
-                <span>$183.82</span>
+                <span>${cartTotal}</span>
               </div>
               <div>
                 <span>Shipping</span>
@@ -123,12 +100,12 @@ const Payment = () => {
               </div>
               <div>
                 <span>Estimated tax</span>
-                <span>$18.84</span>
+                <span>${per}</span>
               </div>
               <hr />
               <div className='total_div'>
                 <span>Estimated total</span>
-                <span>$202.66</span>
+                <span>${cartTotal + per}</span>
               </div>
               <div className='order_submit'>Review Order</div>
             </div>
@@ -138,7 +115,7 @@ const Payment = () => {
               <h2>Review order</h2>
               <div>
                 <span>Your items</span>
-                <span>$183.82</span>
+                <span>${cartTotal}</span>
               </div>
               <div>
                 <span>Shipping</span>
@@ -146,12 +123,12 @@ const Payment = () => {
               </div>
               <div>
                 <span>Estimated tax</span>
-                <span>$18.84</span>
+                <span>${per}</span>
               </div>
               <hr />
               <div className='total_div'>
                 <span>Estimated total</span>
-                <span>$202.66</span>
+                <span>${cartTotal + per}</span>
               </div>
               <div className='order_submit'>Review Order</div>
               <div className='right_text'>

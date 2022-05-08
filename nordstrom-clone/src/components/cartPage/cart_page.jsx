@@ -40,7 +40,7 @@ export const Cart = () => {
         <p className='total_item'>Total Item: {totalItems}</p>
 
         <div className='total_cart_div'>
-          <p className='total_cart'>Total Price:{cartTotal}</p>
+          <p className='total_cart'>Total Price: ${cartTotal}</p>
         </div>
       </div>
       <div className='product_container'>
