@@ -78,7 +78,7 @@ const Home = () => {
         <p>New markdowns on our best-sellers</p>
       </div>
       <div className='image1'>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/ca236f8f-5060-48d5-be5e-1b0b04738222.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -91,7 +91,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/0637d8a4-20be-4f5e-9086-6c03d2167c76.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -104,7 +104,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/b73afbd9-e055-46d0-b7e7-2f5a852afa97.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -117,7 +117,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/8adb15c8-1f95-42db-8a15-a62016353a29.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -130,7 +130,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/a61276de-10d8-4f16-b6bc-410bde09ea3f.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -206,7 +206,7 @@ const Home = () => {
         <h2>Shop the trend</h2>
       </div>
       <div className='image1'>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/0058e5b1-0ec4-433b-8c6a-18a0f69aea02.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266'
@@ -219,7 +219,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/b502150c-1f76-4c2f-b19d-5aae9e4b153e.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266'
@@ -232,7 +232,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/8e968b6d-65c4-4f47-9c1a-dd2e6ebf503c.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266'
@@ -245,7 +245,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/6cc48d7c-3468-4f6a-bd9a-feae6b755d9f.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266'
@@ -258,7 +258,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/3ed2ed5b-fc33-4125-aade-b2a93374c45a.jpeg?q=45&fit=fill&fm=jpg&dpr=2&h=408&w=266'
@@ -336,7 +336,7 @@ const Home = () => {
         <p>The most-purchased items on our site right now</p>
       </div>
       <div className='image1'>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/1de4dab7-a398-422c-8784-0312342e026b.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -349,7 +349,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/776ef265-e215-4661-b327-4ef5c7a54842.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -362,7 +362,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/2417d32b-eb39-4e84-a9bd-1ec649b5c0d6.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -375,7 +375,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/faed4a75-1683-4e92-983a-ad4013197789.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -388,7 +388,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/7f60be83-bde1-4b87-95a2-b239ead61791.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -514,7 +514,7 @@ const Home = () => {
         <p>The most-viewed items by shoppers in your area</p>
       </div>
       <div className='image1'>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/058c565c-a25a-40cd-9223-f43d6ba58995.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -527,7 +527,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/de880f09-2a1e-4fcc-b942-1cea29d568fd.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -540,7 +540,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/75173056-73bd-4dd5-b564-e6039b85cee9.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -553,7 +553,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/331d3f3e-2c36-46a3-94a9-713f3b204c35.jpeg?q=45&dpr=2&h=365.31&w=230'
@@ -566,7 +566,7 @@ const Home = () => {
             <p>(Up to 20% off)</p>
           </div>
         </div>
-        <div>
+        <div className="box">
           <div className='pimage'>
             <img
               src='https://n.nordstrommedia.com/id/sr3/3c393ec9-0275-4725-a9f4-39f8008437b4.jpeg?q=45&dpr=2&h=365.31&w=230'
