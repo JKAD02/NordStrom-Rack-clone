@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./components/home/Home";
 import Footer from "./components/footer/Footer";
@@ -12,6 +12,7 @@ import { Men_Page } from "./components/productPage/men-page";
 import { Kid_Page } from "./components/productPage/kid-page";
 import { Gift_Page } from "./components/productPage/gift-page";
 import { Clearance } from "./components/clearance/Clearance";
+import Payment from "./components/payment/Payment";
 
 function App() {
   return (
@@ -66,6 +67,14 @@ function App() {
           element={
             <CartProvider>
               <Clearance />
+            </CartProvider>
+          }
+        />
+        <Route
+          path='/payment'
+          element={
+            <CartProvider>
+              <Payment />
             </CartProvider>
           }
         />
