@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import { useContext } from "react";
+import SignNameContext from "../../context/SignNameContext";
 
 const Navbar = () => {
+  const { userName } = useContext(SignNameContext);
+  console.log(userName.name);
   return (
     <div className='navBarDiv'>
       <nav>
@@ -15,12 +19,16 @@ const Navbar = () => {
           <input type='text' placeholder=' Search for products or brands' />
         </div>
         <div className='navbar_cart'>
-          <Link
-            to={"/login"}
-            style={{ textDecoration: "none", color: "rgb(60, 57, 57)" }}
-          >
-            <span>Sign In</span>
-          </Link>
+          {userName.name !== "" ? (
+            userName.name
+          ) : (
+            <Link
+              to={"/login"}
+              style={{ textDecoration: "none", color: "rgb(60, 57, 57)" }}
+            >
+              <span>Sign In</span>
+            </Link>
+          )}
           <i class='uil uil-bag'></i>
         </div>
       </nav>

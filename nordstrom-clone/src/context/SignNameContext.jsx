@@ -7,6 +7,7 @@ export const SignNameContextProvider = ({ children }) => {
     email: "",
     name: "",
   });
+  console.log(userName);
 
   return (
     <SignNameContext.Provider value={{ userName, setUserName }}>

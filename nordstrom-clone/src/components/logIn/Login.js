@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, Link, useParams } from "react-router-dom";
 import SignNameContext from "../../context/SignNameContext";
 import Signin from "../signIn & signOut/Signin";
 import SignUp from "../signIn & signOut/SignUp";
@@ -13,13 +13,19 @@ function Login() {
   const [showloginButton, setShowloginButton] = useState(true);
   const [showlogoutButton, setShowlogoutButton] = useState(false);
   const { name } = useParams();
+  const nav = useNavigate();
   const { userName, setUserName } = useContext(SignNameContext);
 
   const onLoginSuccess = (res) => {
     // console.log("Login Success:", res.profileObj.email);
-    // setUserName({...user})
+    setUserName({
+      ...userName,
+      email: res.profileObj.email,
+      name: res.profileObj.name,
+    });
     setShowloginButton(false);
     setShowlogoutButton(true);
+    nav("/");
   };
 
   const onLoginFailure = (res) => {
@@ -31,6 +37,7 @@ function Login() {
     console.clear();
     setShowloginButton(true);
     setShowlogoutButton(false);
+    nav("/");
   };
 
   return (
