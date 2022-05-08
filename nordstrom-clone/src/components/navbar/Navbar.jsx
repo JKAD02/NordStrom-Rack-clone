@@ -53,13 +53,19 @@ const Navbar = () => {
         <Link to={"/shoes"} style={{ textDecoration: "none" }}>
           <span>Shoes</span>
         </Link>
-        <span>Activewear</span>
-        <span>Bags & Accessories</span>
-        <span>Home</span>
-        <span>Beauty</span>
+        <Link to={"/activeware"} style={{ textDecoration: "none" }}>
+          <span>Activewear</span>
+        </Link>
+        <Link to={"/bags"} style={{ textDecoration: "none" }}>
+          <span>Bags & Accessories</span>
+        </Link>
+        <Link to={"/beauty"} style={{ textDecoration: "none" }}>
+          <span>Beauty</span>
+        </Link>
         <Link to={"/gift"} style={{ textDecoration: "none" }}>
           <span>Gifts</span>
         </Link>
+        <span>Home</span>
         <span>Flash Events</span>
       </div>
     </div>
