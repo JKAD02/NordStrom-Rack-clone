@@ -25,7 +25,6 @@ function Login() {
     });
     setShowloginButton(false);
     setShowlogoutButton(true);
-    nav("/");
   };
 
   const onLoginFailure = (res) => {
@@ -57,18 +56,23 @@ function Login() {
           <span>Sign Out</span>
         </Link>
       </h2>
-      {name == "signOut" ? <SignUp /> : <Signin />}
+      {name === "signOut" ? <SignUp /> : <Signin />}
       <div>
         {showloginButton ? (
-          <GoogleLogin
-            className='g-login'
-            clientId={clientId}
-            buttonText='Sign In'
-            onSuccess={onLoginSuccess}
-            onFailure={onLoginFailure}
-            cookiePolicy={"single_host_origin"}
-            isSignedIn={true}
-          />
+          <Link
+            to='/'
+            style={{ textDecoration: "none", color: "rgb(60, 57, 57)" }}
+          >
+            <GoogleLogin
+              className='g-login'
+              clientId={clientId}
+              buttonText='Sign In'
+              onSuccess={onLoginSuccess}
+              onFailure={onLoginFailure}
+              cookiePolicy={"single_host_origin"}
+              isSignedIn={true}
+            />
+          </Link>
         ) : null}
 
         {showlogoutButton ? (

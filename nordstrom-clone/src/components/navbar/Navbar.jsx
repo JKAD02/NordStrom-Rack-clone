@@ -12,23 +12,22 @@ const Navbar = () => {
       <nav>
         <div className='navbar_logo'>
           <Link to={"/"}>
-            <img src='https://n.nordstrommedia.com/alias/nordstrom-rack-logo.svg' />
+            <img
+              src='https://n.nordstrommedia.com/alias/nordstrom-rack-logo.svg'
+              alt=''
+            />
           </Link>
         </div>
         <div className='navbar_search'>
           <input type='text' placeholder=' Search for products or brands' />
         </div>
         <div className='navbar_cart'>
-          {userName.name !== "" ? (
-            userName.name
-          ) : (
-            <Link
-              to={"/login"}
-              style={{ textDecoration: "none", color: "rgb(60, 57, 57)" }}
-            >
-              <span>Sign In</span>
-            </Link>
-          )}
+          <Link
+            to={"/login"}
+            style={{ textDecoration: "none", color: "rgb(60, 57, 57)" }}
+          >
+            <span>{userName.name !== "" ? userName.name : "Sign In"}</span>
+          </Link>
           <i class='uil uil-bag'></i>
         </div>
       </nav>
