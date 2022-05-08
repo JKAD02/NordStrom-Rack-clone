@@ -2,7 +2,7 @@ import "../productPage/product-page.css";
 import giflogo from "../../images/gift.svg";
 import freedelivery from "../../images/Screenshot (1310).png";
 import { useCart } from "react-use-cart";
-
+import { useNavigate } from "react-router-dom"
 export const Cart = () => {
   const {
     items,
@@ -13,7 +13,7 @@ export const Cart = () => {
     removeItem,
     emptyCart,
   } = useCart();
-
+const Navigation=useNavigate()
   return (
     <div className='main_div'>
       <div className='shopping_bag_main'>
@@ -96,7 +96,9 @@ export const Cart = () => {
           <button className='emptying_cart_button' onClick={() => emptyCart()}>
             Clear Cart
           </button>
-          <button className='emptying_cart_button'>Check Out</button>
+          <button className='emptying_cart_button'
+          onClick={()=>{Navigation("/payment")}}
+          >Check Out</button>
         </div>
       </div>
     </div>
