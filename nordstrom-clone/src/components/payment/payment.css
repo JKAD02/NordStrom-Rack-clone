@@ -17,6 +17,7 @@ body {
     width: 45px;
     float: left;
     margin: 33px 30px;
+    cursor: pointer;
 }
 
 .nav_cart {
@@ -24,6 +25,7 @@ body {
     font-size: 25px;
     width: 45px;
     margin: 25px;
+    cursor: pointer;
 }
 
 .pay_page main {

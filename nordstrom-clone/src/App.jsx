@@ -1,8 +1,6 @@
 import React from "react";
 import { Route, Routes, useParams } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
 import Home from "./components/home/Home";
-import Footer from "./components/footer/Footer";
 import Login from "./components/logIn/Login";
 import { Women_Page } from "./components/productPage/women-page";
 import { CartProvider } from "react-use-cart";
@@ -13,7 +11,6 @@ import { Kid_Page } from "./components/productPage/kid-page";
 import { Gift_Page } from "./components/productPage/gift-page";
 import { Clearance } from "./components/clearance/Clearance";
 import Payment from "./components/payment/Payment";
-import { Activeware } from "./components/productPage/women_data";
 import { Activeware_Page } from "./components/productPage/activeware-page";
 import { Bags_Page } from "./components/productPage/bags-page";
 import { Beauty_Page } from "./components/productPage/beauty-page";
@@ -21,7 +18,6 @@ import { Beauty_Page } from "./components/productPage/beauty-page";
 function App() {
   return (
     <div>
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
@@ -115,7 +111,6 @@ function App() {
           }
         />
       </Routes>
-      <Footer />
     </div>
   );
 }

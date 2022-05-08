@@ -7,7 +7,7 @@
 
 .box-1 {
     width: 17%;
-    /* border:1px solid red; */
+    /* border: 1px solid red; */
     overflow-y: scroll;
     height: 600px;
 }
@@ -33,6 +33,7 @@
     color: #737373;
     margin-right: 10px;
     margin-bottom: 0px;
+    /* background-color: red; */
 }
 
 .grey {
@@ -42,14 +43,15 @@
 
 .box-2 {
     width: 83%;
-    /* border:1px solid red; */
+    /* border: 1px solid red; */
     /* height:800px; */
 }
 
 .subbox-1-box-2 {
     width: 100%;
-    /* border:1px solid red; */
-    height: 380px;
+    margin-bottom: 20px;
+    /* border: 1px solid red; */
+    /* height: 380px; */
 }
 
 .subbox-1-box-2-bauty {
@@ -302,6 +304,7 @@
     color: #fff;
     font-weight: 400;
     margin-bottom: 0px;
+    transition: 0.3s;
 }
 
 .rating {
@@ -357,7 +360,7 @@
     width: 50%;
     height: 80%;
     padding-top: 10px;
-    background-color: #bab1b1;
+    /* background-color: #bab1b1; */
     font-weight: 400;
     font-size: 14px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -548,6 +551,7 @@
     color: #fff;
     background-color: #00819d;
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .emptying_cart {
@@ -563,5 +567,7 @@
     border: none;
     color: #fff;
     background-color: #00819d;
+    margin-top: 20px;
     margin-right: 20px;
+    cursor: pointer;
 }

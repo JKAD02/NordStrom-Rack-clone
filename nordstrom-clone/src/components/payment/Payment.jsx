@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import "./payment.css";
 
@@ -6,14 +7,25 @@ const Payment = () => {
   const { items, cartTotal } = useCart();
 
   const per = (10 / 100) * cartTotal;
+  const nav = useNavigate();
   return (
     <>
       <div className='pay_page'>
         <nav>
-          <div className='nav_logo'>
+          <div
+            className='nav_logo'
+            onClick={() => {
+              nav("/");
+            }}
+          >
             <img src='https://n.nordstrommedia.com/alias/nordstrom-rack-logo.svg' />
           </div>
-          <div className='nav_cart'>
+          <div
+            className='nav_cart'
+            onClick={() => {
+              nav("/cart");
+            }}
+          >
             <i class='uil uil-bag'></i>
           </div>
         </nav>

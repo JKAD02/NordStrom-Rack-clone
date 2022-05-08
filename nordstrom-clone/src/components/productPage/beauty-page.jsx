@@ -2,6 +2,8 @@ import "./product-page.css";
 import { Beautydata } from "./women_data";
 import Product_card from "../cardPage/card_page";
 import React, { useState, useEffect } from "react";
+import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
 // const name=["Running & Training","Yoga & Barre","Hiking & Outdoors","Athleisure","New Arrivals"]
 // const type=["Activewear","Capris","Skirts","Tees","Crops","Jackets","Leggings","Shirts","Shorts","Socks","Sports","Sweatpants","Sweatshirts","Hoodies","Swim","Tanks","Activewear","Athletic Gear","Equipment"]
 const fiter_type = [
@@ -33,20 +35,22 @@ export const Beauty_Page = () => {
   }, [sortType]);
 
   return (
-    <div className='container'>
-      <div className='box-1'>
-        {fiter_type.map((r, i) => (
-          <div key={i}>
-            <div className='filter_type_each'>
-              <p className='filter_p_tage'>{r}</p>
-              <p className='filter_p1_tage'>+</p>
+    <>
+      <Navbar />
+      <div className='container'>
+        <div className='box-1'>
+          {fiter_type.map((r, i) => (
+            <div key={i}>
+              <div className='filter_type_each'>
+                <p className='filter_p_tage'>{r}</p>
+                <p className='filter_p1_tage'>+</p>
+              </div>
+              <hr className='grey' />
             </div>
-            <hr className='grey' />
-          </div>
-        ))}
-      </div>
-      <div className='box-2'>
-        {/* <div className='subbox-1-box-2'>
+          ))}
+        </div>
+        <div className='box-2'>
+          {/* <div className='subbox-1-box-2'>
                     <p className='workout_title'><strong>For Spring Workouts & Hangouts</strong></p>
                     <img src="https://n.nordstrommedia.com/id/636685ef-4e37-4318-9486-c498003404af.jpeg?h=417&w=1334" className='show_img'/> 
                     <div className='naming_div'>
@@ -56,11 +60,11 @@ export const Beauty_Page = () => {
                     }
                 </div>  
                 </div> */}
-        <div className='subbox-1-box-2-bauty'>
-          <p className='workout_title'>
-            <strong>Charlotte Tilbury</strong>
-          </p>
-          {/* <div className='category'>
+          <div className='subbox-1-box-2-bauty'>
+            <p className='workout_title'>
+              <strong>Charlotte Tilbury</strong>
+            </p>
+            {/* <div className='category'>
                       <div className='category_list'>
                           {type.map((e,i)=>(
                             //   <li className='category_list_each_item' key={i}>
@@ -70,21 +74,25 @@ export const Beauty_Page = () => {
                           ))}
                       </div>
                   </div>  */}
-          <div className='total_item'>
-            <p className='total_item_1'>1591 items</p>
-            <select
-              className='sort_by_feature'
-              onChange={(e) => setSortType(e.target.value)}
-            >
-              <option value=''>Custom Sorting</option>
-              <option value='CustomerRating'>Sort by customer rating</option>
-              <option value='Newest'>Sort by newest</option>
-              <option value='PriceHighToLow'>Sort by price: high to low</option>
-              <option value='PriceLowToHigh'>Sort by price: low to high</option>
-            </select>
-          </div>
-          <div className='display_item'>
-            {/* <div className='item_card'>
+            <div className='total_item'>
+              <p className='total_item_1'>1591 items</p>
+              <select
+                className='sort_by_feature'
+                onChange={(e) => setSortType(e.target.value)}
+              >
+                <option value=''>Custom Sorting</option>
+                <option value='CustomerRating'>Sort by customer rating</option>
+                <option value='Newest'>Sort by newest</option>
+                <option value='PriceHighToLow'>
+                  Sort by price: high to low
+                </option>
+                <option value='PriceLowToHigh'>
+                  Sort by price: low to high
+                </option>
+              </select>
+            </div>
+            <div className='display_item'>
+              {/* <div className='item_card'>
                           <img src="https://n.nordstrommedia.com/id/sr3/e69e9d10-7af6-453d-a78e-b65340704627.jpeg?h=365&w=240&dpr=2"/>
                           <div className='item_card_sub'>
                           <h4 className='new_markdown'>New Markdown</h4>
@@ -100,23 +108,25 @@ export const Beauty_Page = () => {
                           <button className='add_to_cart'>Add to Bag</button>
                           </div>
                       </div> */}
-            {data.map((ele) => {
-              return (
-                <Product_card
-                  key={ele.id}
-                  name={ele.name}
-                  price={ele.price}
-                  strprice={ele.origPrice}
-                  description={ele.description}
-                  image={ele.images}
-                  rating={ele.rating}
-                  item={ele}
-                />
-              );
-            })}
+              {data.map((ele) => {
+                return (
+                  <Product_card
+                    key={ele.id}
+                    name={ele.name}
+                    price={ele.price}
+                    strprice={ele.origPrice}
+                    description={ele.description}
+                    image={ele.images}
+                    rating={ele.rating}
+                    item={ele}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };

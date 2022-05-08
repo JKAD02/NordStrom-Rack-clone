@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./navbar.css";
 import { useContext } from "react";
 import SignNameContext from "../../context/SignNameContext";
 
 const Navbar = () => {
   const { userName } = useContext(SignNameContext);
+  const nav = useNavigate();
   console.log(userName.name);
   return (
     <div className='navBarDiv'>
@@ -38,33 +39,69 @@ const Navbar = () => {
       </nav>
       <hr />
       <div className='menu_div'>
-        <Link to={"/clearance"} style={{ textDecoration: "none" }}>
-          <span>Clearance</span>
-        </Link>
-        <Link to={"/women"} style={{ textDecoration: "none" }}>
-          <span>Women</span>
-        </Link>
-        <Link to={"/men"} style={{ textDecoration: "none" }}>
-          <span>Men</span>
-        </Link>
-        <Link to={"/kid"} style={{ textDecoration: "none" }}>
-          <span>Kids</span>
-        </Link>
-        <Link to={"/shoes"} style={{ textDecoration: "none" }}>
-          <span>Shoes</span>
-        </Link>
-        <Link to={"/activeware"} style={{ textDecoration: "none" }}>
-          <span>Activewear</span>
-        </Link>
-        <Link to={"/bags"} style={{ textDecoration: "none" }}>
-          <span>Bags & Accessories</span>
-        </Link>
-        <Link to={"/beauty"} style={{ textDecoration: "none" }}>
-          <span>Beauty</span>
-        </Link>
-        <Link to={"/gift"} style={{ textDecoration: "none" }}>
-          <span>Gifts</span>
-        </Link>
+        <span
+          onClick={() => {
+            nav("/clearance");
+          }}
+        >
+          Clearance
+        </span>
+        <span
+          onClick={() => {
+            nav("/women");
+          }}
+        >
+          Women
+        </span>
+        <span
+          onClick={() => {
+            nav("/men");
+          }}
+        >
+          Men
+        </span>
+        <span
+          onClick={() => {
+            nav("/kid");
+          }}
+        >
+          Kids
+        </span>
+        <span
+          onClick={() => {
+            nav("/shoes");
+          }}
+        >
+          Shoes
+        </span>
+        <span
+          onClick={() => {
+            nav("/activeware");
+          }}
+        >
+          Activewear
+        </span>
+        <span
+          onClick={() => {
+            nav("/bags");
+          }}
+        >
+          Bags & Accessories
+        </span>
+        <span
+          onClick={() => {
+            nav("/beauty");
+          }}
+        >
+          Beauty
+        </span>
+        <span
+          onClick={() => {
+            nav("/gift");
+          }}
+        >
+          Gifts
+        </span>
         <span>Home</span>
         <span>Flash Events</span>
       </div>

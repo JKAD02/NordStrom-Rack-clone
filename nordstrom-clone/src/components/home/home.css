@@ -62,10 +62,14 @@
     position: relative;
 }
 
+.each-slide img {
+    width: 100%;
+}
+
 .each-slide>span {
     position: absolute;
     top: 20%;
-    right: 10%;
+    right: 8%;
     width: 25%;
     text-align: left;
 }
@@ -92,12 +96,12 @@
 
 .image1 {
     /* border: 1px solid black; */
-    height: 400px;
-    margin-bottom: 10px;
+    /* height: 400px; */
+    margin: 50px 0;
     width: 90%;
     display: flex;
     flex-direction: row;
-    gap: 5%;
+    gap: 30px;
 }
 
 .image1>div {
@@ -105,14 +109,9 @@
     width: 17%;
 }
 
-.box{
+.box {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    padding: 10px 10px;
-}
-
-.pimage {
-    height: 70%;
-    /* border: 1px solid black; */
+    padding: 10px;
 }
 
 .pimage>img {
@@ -121,9 +120,7 @@
 }
 
 .product {
-    color: rgb(60, 57, 57)
-    
-    
+    color: rgb(60, 57, 57);
 }
 
 .mom {
