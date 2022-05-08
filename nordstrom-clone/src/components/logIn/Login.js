@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { Link, useParams } from "react-router-dom";
+import SignNameContext from "../../context/SignNameContext";
 import Signin from "../signIn & signOut/Signin";
 import SignUp from "../signIn & signOut/SignUp";
 import "./logIn.css";
@@ -12,9 +13,11 @@ function Login() {
   const [showloginButton, setShowloginButton] = useState(true);
   const [showlogoutButton, setShowlogoutButton] = useState(false);
   const { name } = useParams();
+  const { userName, setUserName } = useContext(SignNameContext);
 
   const onLoginSuccess = (res) => {
-    console.log("Login Success:", res.profileObj);
+    // console.log("Login Success:", res.profileObj.email);
+    // setUserName({...user})
     setShowloginButton(false);
     setShowlogoutButton(true);
   };
