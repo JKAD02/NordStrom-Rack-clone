@@ -28,7 +28,12 @@ const Navbar = () => {
           >
             <span>{userName.name !== "" ? userName.name : "Sign In"}</span>
           </Link>
-          <i class='uil uil-bag'></i>
+          <Link
+            to='/cart'
+            style={{ textDecoration: "none", color: "rgb(60, 57, 57)" }}
+          >
+            <i class='uil uil-bag'></i>
+          </Link>
         </div>
       </nav>
       <hr />
