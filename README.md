@@ -1,6 +1,6 @@
 # NordStrom-Rack-clone
 This is a working clone of the Nordstorm Rack website, this project has been done in order to learn the basic working of a website by implementing HTML5, CSS3, JavaScript, JS DOM. MongoDB, Express, ReactJs. Working on this project helps to learn a lot of new things that goes into building a website. This is our collaborative project under the guidance of MASAI Team to facilitate the full stack web development curriculam.
-
+project-live: https://nordstrom-rack.netlify.app/
 # Uses
 
 We can sign in login,signup,add products to cart,buy prducts
